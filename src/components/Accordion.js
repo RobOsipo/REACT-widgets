@@ -14,6 +14,7 @@ const Accordion = (props) => {
 
 
 let renderedItems = props.items.map((item, index) => {
+    
     const active = index === activeIndex ? 'active' : ''
     
 
