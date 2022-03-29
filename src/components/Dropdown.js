@@ -32,7 +32,7 @@ const Dropdown = (props) => {
     return (
         
         <div onClick={() => props.onSelectedChange(option) } key={option.value} className='item'>
-            {option.label}
+            {option.value}
         </div>
        
     )
@@ -46,7 +46,7 @@ const Dropdown = (props) => {
     return (
         <div ref={ref} className='ui form'>
             <div className='field'>
-                <label className='label'>Select a Color</label>
+                <label className='label'>{props.label}</label>
                   <div 
                     onClick={() => setOpen(prevState => !prevState)} 
                     className={`ui selection dropdown ${open ? 'visible active' : ''}` }
@@ -57,7 +57,7 @@ const Dropdown = (props) => {
                         {renderedOptions}
                     </div>
                 </div>
-                <h1 style={{ color: props.selected.value}}>hello</h1>
+                
             </div>
            
         </div>
