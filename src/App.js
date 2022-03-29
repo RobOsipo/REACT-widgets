@@ -34,10 +34,14 @@ const options = [
 ]
 
 const App = () => {
+
+    const [selected, setSelected] = React.useState(options[0])
+
+
     return (
         <div>
        
-            <Dropdown options={options}/>
+            <Dropdown onSelectedChange={setSelected} selected={selected} options={options}/>
         </div>
         
     )
