@@ -7,17 +7,20 @@ const Dropdown = (props) => {
     const ref = React.useRef();
 
     
-
     React.useEffect(() => {
-        document.body.addEventListener(
-          "click",
-          (e) => {
-           if (ref.current.contains(e.target)) return
-           
-            setOpen(false);
-          },
-          { capture: true }
-        )
+        const onBodyClick = (event) => {
+          if (ref.current.contains(event.target)) {
+            return;
+          }
+          setOpen(false);
+        };
+        document.body.addEventListener("click", onBodyClick, { capture: true });
+     
+        return () => {
+          document.body.removeEventListener("click", onBodyClick, {
+            capture: true,
+          });
+        };
       }, []);
 
    
@@ -27,11 +30,15 @@ const Dropdown = (props) => {
     if (option.value === props.selected.value) return null;
     
     return (
+        
         <div onClick={() => props.onSelectedChange(option) } key={option.value} className='item'>
             {option.label}
         </div>
+       
     )
     });
+
+
 
 
 
@@ -50,7 +57,9 @@ const Dropdown = (props) => {
                         {renderedOptions}
                     </div>
                 </div>
+                <h1 style={{ color: props.selected.value}}>hello</h1>
             </div>
+           
         </div>
     )
 }

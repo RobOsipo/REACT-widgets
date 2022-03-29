@@ -36,12 +36,13 @@ const options = [
 const App = () => {
 
     const [selected, setSelected] = React.useState(options[0])
+    const [showDropDown, setShowDropDown] = React.useState(true)
 
 
     return (
         <div>
-       
-            <Dropdown onSelectedChange={setSelected} selected={selected} options={options}/>
+            <button onClick={() => setShowDropDown(prevState => !prevState)}>Toggle Dropdown</button>
+            {showDropDown ? <Dropdown onSelectedChange={setSelected} selected={selected} options={options}/> : null}
         </div>
         
     )
