@@ -3,5 +3,5 @@
 * ***The second widget will be a search bar that displays results from the wikipedia API at the base route '/searchwiki'***
 * ***The third will be dropdown color picker at base route '/color'***
 * ***The fourth widget will be an accordion style notes at base route '/accordion'***
-## ***Currently under construction***
+
 
