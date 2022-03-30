@@ -1,5 +1,6 @@
 import React from 'react';
 import Dropdown from './Dropdown.js'
+import Convert from './Convert.js'
 
 
 const options = [
@@ -51,6 +52,9 @@ const [text, setText] = React.useState('')
             </div>
          </div>
             <Dropdown label="Select a Language" selected={language} onSelectedChange={setLanguage} options={options} />
+            <hr />
+            <h3 className="ui header">Output</h3>
+            <Convert language={language} text={text} />
         </div>
     )
 }
