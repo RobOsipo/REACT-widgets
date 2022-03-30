@@ -28,7 +28,9 @@ const Convert = (props) => {
     }, [ language, text ])
 
     return (
-        <div>{translated}</div>
+        <div>
+            <h1 className="ui header">{translated}</h1>
+        </div>
     )
 }
 
