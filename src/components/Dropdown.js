@@ -32,7 +32,7 @@ const Dropdown = (props) => {
     return (
         
         <div onClick={() => props.onSelectedChange(option) } key={option.value} className='item'>
-            {option.value}
+            {option.label}
         </div>
        
     )

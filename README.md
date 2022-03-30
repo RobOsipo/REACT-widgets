@@ -1,4 +1,4 @@
-# This is a React project that uses a navigation to switch between muliple widgets
+# This is a React project that uses a navigation, built from scratch, to switch between muliple widgets.
 * ***The first widget will be an accordion style notes***
 * ***The second widget will be a search bar that displays results from the wikipedia API***
 * ***The third will be dropdown color picker***
