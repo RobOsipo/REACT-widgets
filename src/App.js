@@ -4,6 +4,7 @@ import Search from './components/Search.js'
 import Dropdown from './components/Dropdown.js'
 import Translate from './components/Translate.js'
 import Route from './components/Route.js'
+import Header from './components/Header.js'
 
 
 
@@ -67,6 +68,8 @@ const App = () => {
      return (
 
         <div>
+            <Header />
+            
            <Route path='/'>
                 <Translate />
            </Route>
